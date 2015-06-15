@@ -8,14 +8,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-public class ViewPagerAdapter extends PagerAdapter implements Animation.AnimationListener {
+public class ViewPagerAdapter extends PagerAdapter {
 
     //Declare variables
     Context context;
@@ -51,7 +50,6 @@ public class ViewPagerAdapter extends PagerAdapter implements Animation.Animatio
         //Declare variables
         ImageView iconimage, whitebox, bgimage;
         TextView titletext, title_2text, descriptiontext;
-        final ViewPager viewPager;
         Animation translate, slide;
         inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View itemView = inflater.inflate(R.layout.slidescreen_item, container, false);
@@ -88,10 +86,11 @@ public class ViewPagerAdapter extends PagerAdapter implements Animation.Animatio
         translate.setRepeatCount(-1);
         translate.setRepeatMode(Animation.REVERSE);
         translate.setInterpolator(new LinearInterpolator());
-        translate.setFillAfter(true);
         bgimage.setAnimation(translate);
-        slide = AnimationUtils.loadAnimation(this.context, R.anim.whiteboxanim);
-        slide.setAnimationListener(this);
+        slide = new TranslateAnimation(TranslateAnimation.ABSOLUTE, 150f , TranslateAnimation.ABSOLUTE, 0f,
+                TranslateAnimation.ABSOLUTE,0f,TranslateAnimation.ABSOLUTE,0f);
+        slide.setDuration(3000);
+        slide.setInterpolator(new LinearInterpolator());
         whitebox.startAnimation(slide);
         iconimage.startAnimation(slide);
         titletext.startAnimation(slide);
@@ -102,26 +101,11 @@ public class ViewPagerAdapter extends PagerAdapter implements Animation.Animatio
         return itemView;
     }
 
-
     @Override
     public void destroyItem(ViewGroup container, int position, Object object) {
         //Remove slidescreen_item.xml from viewpager
         ((ViewPager) container).removeView((RelativeLayout) object);
     }
 
-    @Override
-    public void onAnimationStart(Animation animation) {
-
-    }
-
-    @Override
-    public void onAnimationEnd(Animation animation) {
-
-    }
-
-    @Override
-    public void onAnimationRepeat(Animation animation) {
-
-    }
 }
 

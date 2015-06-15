@@ -30,6 +30,15 @@ public class slidescreen extends ActionBarActivity {
     }
 
     @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        if (savedInstanceState != null) {
+            int mCurrentItem = savedInstanceState.getInt("current_item");
+            viewPager.setCurrentItem( mCurrentItem);
+        }
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.slidescreenmain);
@@ -89,10 +98,6 @@ public class slidescreen extends ActionBarActivity {
                         "la superficie. De este modo, el\n" + "mantenimiento de la superficie es mínimo\n" +
                         "y más fácil de limpiar."};
 
-        if (savedInstanceState != null) {
-            int mCurrentItem = savedInstanceState.getInt("current_item");
-            viewPager.setCurrentItem(mCurrentItem);
-        }
         // Locate the ViewPager in viewpager_main.xml
         viewPager = (ViewPager) findViewById(R.id.pager);
         // Pass results to ViewPagerAdapter Class
