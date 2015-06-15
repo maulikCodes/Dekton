@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/slidescreenmain"></include>
+    <ImageView
+        android:id="@+id/bgimage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="-50dp"
+        android:layout_marginTop="-50dp"
+        android:background="#000000" />
+
+    <ImageView
+        android:id="@+id/slidedownimage"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_centerHorizontal="true"
+        android:clickable="true"
+        android:onClick="onClickSlideDown"
+        android:scaleType="fitXY"
+        android:src="@mipmap/slidedown" />
+
+    <ImageView
+        android:id="@+id/dektonlogoimage"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:adjustViewBounds="true"
+        android:padding="15dp"
+        android:src="@mipmap/dektonlogowhite" />
+
+    <View
+        android:id="@+id/h_separator"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/dektonlogoimage"
+        android:background="@android:color/darker_gray"
+        android:visibility="visible" />
+
+
+    <View
+        android:id="@+id/v_separator"
+        android:layout_width="1dp"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/h_separator"
+        android:layout_toLeftOf="@+id/closebuttonimage"
+        android:background="@android:color/darker_gray"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/closebuttonimage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/MainText"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:clickable="true"
+        android:onClick="onClickCloseButton"
+        android:src="@mipmap/closebutton" />
+
+    <TextView
+        android:id="@+id/MainText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/slidedownimage"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/v_separator"
+        android:text="@string/main_right"
+        android:textColor="#ffffffff"
+        android:textSize="14sp" />
+
+
+    <ImageView
+        android:id="@+id/whitebox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"
+        android:adjustViewBounds="true"
+        android:alpha="40"
+        android:src="@mipmap/whitebox" />
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/whitebox"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:src="#000000" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/icon"
+        android:layout_centerHorizontal="true"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/title_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="3dp"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="20dp"
+        android:textSize="10sp" />
+</RelativeLayout>
+

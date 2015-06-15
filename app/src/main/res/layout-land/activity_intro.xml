@@ -1,0 +1,214 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".intro">
+
+    <ImageView
+        android:id="@+id/slidedownimage"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_centerHorizontal="true"
+        android:clickable="true"
+        android:onClick="onClickSlideDown"
+        android:scaleType="fitXY"
+        android:src="@mipmap/slidedown" />
+
+    <ImageView
+        android:id="@+id/dektonlogoimage"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:adjustViewBounds="true"
+        android:padding="15dp"
+        android:src="@mipmap/dektonlogo" />
+
+    <View
+        android:id="@+id/h_separator"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/introimage"
+        android:background="@android:color/darker_gray"
+        android:visibility="visible" />
+    <View
+        android:id="@+id/v_separator"
+        android:layout_width="1dp"
+        android:layout_height="fill_parent"
+        android:layout_toRightOf="@+id/introimage"
+        android:layout_below="@+id/h_separator"
+        android:background="@android:color/darker_gray"
+        android:visibility="visible" />
+
+    <View
+        android:id="@+id/v_separator2"
+        android:layout_width="1dp"
+        android:layout_height="fill_parent"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/closebuttonimage"
+        android:layout_above="@+id/h_separator"
+        android:background="@android:color/darker_gray"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/closebuttonimage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:onClick="onClickCloseButton"
+        android:src="@mipmap/closebutton"
+        android:paddingRight="3dp"
+        android:layout_alignBottom="@+id/MainText"
+        android:layout_alignRight="@+id/scrollview"
+        android:layout_alignEnd="@+id/scrollview" />
+
+    <ImageView
+        android:id="@+id/introimage"
+        android:layout_width="150dp"
+        android:layout_height="300dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/dektonlogoimage"
+        android:layout_toLeftOf="@+id/slidedownimage"
+        android:layout_toStartOf="@+id/slidedownimage"
+        android:scaleType="fitXY"
+        android:src="@drawable/introimage" />
+
+    <TextView
+        android:id="@+id/MainText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/slidedownimage"
+        android:layout_toLeftOf="@+id/v_separator2"
+        android:layout_marginRight="10dp"
+        android:text="@string/title_upper_left"
+        android:textColor="#fe5c5c5c"
+        android:textSize="14sp" />
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/h_separator"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/introimage">
+
+
+        <RelativeLayout
+            android:id="@+id/relativelayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/introimage"
+            android:layout_toEndOf="@+id/introimage"
+            android:layout_toRightOf="@+id/introimage">
+
+
+            <TextView
+                android:id="@+id/AboveImage1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:text="@string/first_para"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/AboveImage2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/AboveImage1"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/second_para"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/graphimage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/sinterizadas"
+                android:layout_below="@+id/AboveImage2"
+                android:layout_marginLeft="70dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:adjustViewBounds="true"
+                android:src="@mipmap/graph" />
+
+            <TextView
+                android:id="@+id/TSP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/AboveImage2"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/TSP"
+                android:textColor="#fe5c5c5c"
+                android:textSize="8sp" />
+
+            <TextView
+                android:id="@+id/tecnologia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/TSP"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="2dp"
+                android:text="@string/tecnologia"
+                android:textColor="#fe5c5c5c"
+                android:textSize="8sp" />
+
+            <TextView
+                android:id="@+id/departiculas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tecnologia"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="2dp"
+                android:text="@string/departiculas"
+                android:textColor="#fe5c5c5c"
+                android:textSize="8sp" />
+
+            <TextView
+                android:id="@+id/sinterizadas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/departiculas"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="2dp"
+                android:text="@string/sinterizadas"
+                android:textColor="#fe5c5c5c"
+                android:textSize="8sp" />
+
+            <TextView
+                android:id="@+id/BelowImage1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/graphimage"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/third_para"
+                android:textColor="#fe5c5c5c"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/BelowImage2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/BelowImage1"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/fourth_para"
+                android:textColor="#fe5c5c5c"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

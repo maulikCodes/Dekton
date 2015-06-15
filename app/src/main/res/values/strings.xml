@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">Dekton</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_upper_left">QUE ES DEKTON ?</string>
+    <string name="first_para">Dekton es una mezcla sofisticada de las materias primas que se utilizan para fabricar, vidrio, porcelánicos de última generación y superficies de cuarzo.</string>
+    <string name="second_para">Dekton emula en unas horas lo que la naturaleza tarda en hacer milenios, a través de un exclusivo proceso tecnológico.</string>
+    <string name="TSP">TSP</string>
+    <string name="tecnologia">TECNOLOGÍA</string>
+    <string name="departiculas">DE PARTÍCULAS</string>
+    <string name="sinterizadas">SINTERIZADAS</string>
+    <string name="third_para">TSP es un proceso que sinteriza partículas minerales haciendo que enlacen entre si, cambien y compacten su estructura interna.</string>
+    <string name="fourth_para">La tecnología TSP sintetiza, de una forma absolutamente innovadora, procedimientos de las industrias tecnológicas más avanzadas. Una evolución que partiendo de aquellas, supone un salto tecnológico e industrial capaz de generar un proceso nuevo, un material revolucionario y un producto líder.</string>
+    <string name="main_right">VENTAJAS</string>
+    <string name="t00">ALTA RESISTENCIA A</string>
+    <string name="t001">LOS RAYOS UV</string>
+    <string name="t01">ALTAMENTE</string>
+    <string name="t011">RESISTENTE AL RAYADO</string>
+    <string name="t02">RESISTENCIA A</string>
+    <string name="t021">LAS MANCHAS</string>
+    <string name="t03">ALTA RESISTENCIA</string>
+    <string name="t031">AL FUEGO Y AL CALOR</string>
+    <string name="t10">RESISTENCIA A</string>
+    <string name="t101">LA ABRASIÓN</string>
+    <string name="t11">RESISTENCIA AL</string>
+    <string name="t111">HIELO Y DESHIELO</string>
+    <string name="t12">RESISTENCIA</string>
+    <string name="t121">MECÁNICA</string>
+    <string name="t13">NULA ABSORCIÓN</string>
+    <string name="t131">DEL AGUA</string>
+    <string name="t20">ESTABILIDAD</string>
+    <string name="t201">DEL COLOR</string>
+    <string name="t21">ESTABILIDAD</string>
+    <string name="t211">DIMENSIONAL</string>
+    <string name="t22">ALTA RESISTENCIA</string>
+    <string name="t221">A LA HIDRÓLISIS</string>
+    <string name="t23">MATERIAL</string>
+    <string name="t231">INCOMBUSTIBLE</string>
+    <string name="main_right_5">VENTAJAS</string>
+    <string name="t03_05">Dekton es altamente resistente a los rayos ultravioleta (UV) y su color no degrada con el tiempo, lo que hace que sea un material perfecto tanto para interiores como para exteriores.</string>
+    <string name="p5_title">ALTA RESISTENCIA A</string>
+    <string name="p5_title2">LOS RAYOS UV</string>
+</resources>

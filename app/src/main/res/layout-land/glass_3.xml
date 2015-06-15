@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/glass_3image">
+
+    <ImageView
+        android:id="@+id/slidedownimage"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_centerHorizontal="true"
+        android:clickable="true"
+        android:onClick="onClickSlideDown"
+        android:scaleType="fitXY"
+        android:src="@mipmap/slidedown" />
+
+    <ImageView
+        android:id="@+id/dektonlogoimage"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:adjustViewBounds="true"
+        android:padding="15dp"
+        android:src="@mipmap/dektonlogowhite" />
+
+    <View
+        android:id="@+id/h_separator"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/dektonlogoimage"
+        android:background="@android:color/darker_gray"
+        android:visibility="visible" />
+
+
+    <View
+        android:id="@+id/v_separator"
+        android:layout_width="1dp"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/h_separator"
+        android:layout_toLeftOf="@+id/closebuttonimage"
+        android:background="@android:color/darker_gray"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/closebuttonimage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/MainText"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:clickable="true"
+        android:onClick="onClickCloseButton"
+        android:src="@mipmap/closebutton" />
+
+    <TextView
+        android:id="@+id/MainText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/slidedownimage"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/v_separator"
+        android:text="@string/main_right"
+        android:textColor="#ffffffff"
+        android:textSize="14sp" />
+
+    <ScrollView
+        android:id="@+id/sview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/h_separator"
+        android:layout_marginTop="30dp">
+
+        <TableLayout
+            android:id="@+id/tlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableRow >
+
+                <ImageView
+                    android:id="@+id/i00"
+                    style="@style/glass_3common_land"
+                    android:layout_column="0"
+                    android:src="@mipmap/ic00" />
+
+                <ImageView
+                    android:id="@+id/i01"
+                    style="@style/glass_3common_land"
+                    android:layout_column="1"
+                    android:src="@mipmap/ic01" />
+
+                <ImageView
+                    android:id="@+id/i02"
+                    style="@style/glass_3common_land"
+                    android:layout_column="2"
+                    android:src="@mipmap/ic02" />
+
+                <ImageView
+                    android:id="@+id/i03"
+                    style="@style/glass_3common_land"
+                    android:layout_column="3"
+                    android:src="@mipmap/ic03" />
+
+            </TableRow>
+
+            <TableRow android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/t00"
+                    style="@style/glass_3common_land"
+                    android:layout_column="0"
+                    android:gravity="center_horizontal"
+                    android:text="@string/t00" />
+
+                <TextView
+                    android:id="@+id/t01"
+                    style="@style/glass_3common_land"
+                    android:layout_column="1"
+                    android:gravity="center_horizontal"
+                    android:text="@string/t01" />
+
+                <TextView
+                    android:id="@+id/t02"
+                    style="@style/glass_3common_land"
+                    android:layout_column="2"
+                    android:gravity="center_horizontal"
+                    android:text="@string/t02" />
+
+                <TextView
+                    android:id="@+id/t03"
+                    style="@style/glass_3common_land"
+                    android:layout_column="4"
+                    android:gravity="center_horizontal"
+                    android:text="@string/t03" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/t001"
+                    style="@style/glass_3common_land"
+                    android:layout_column="0"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:text="@string/t001" />
+
+                <TextView
+                    android:id="@+id/t011"
+                    style="@style/glass_3common_land"
+                    android:layout_column="1"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:text="@string/t011" />
+
+                <TextView
+                    android:id="@+id/t021"
+                    style="@style/glass_3common_land"
+                    android:layout_column="2"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:text="@string/t021" />
+
+                <TextView
+                    android:id="@+id/t031"
+                    style="@style/glass_3common_land"
+                    android:layout_column="4"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:text="@string/t031" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </TableRow>
+
+            <TableRow android:layout_marginTop="50dp">
+
+                <ImageView
+                    android:id="@+id/i10"
+                    style="@style/glass_3common_land"
+                    android:layout_column="0"
+                    android:src="@mipmap/ic10" />
+
+                <ImageView
+                    android:id="@+id/i11"
+                    style="@style/glass_3common_land"
+                    android:layout_column="1"
+                    android:src="@mipmap/ic11" />
+
+                <ImageView
+                    android:id="@+id/i12"
+                    style="@style/glass_3common_land"
+                    android:layout_column="2"
+                    android:src="@mipmap/ic12" />
+
+                <ImageView
+                    android:id="@+id/i13"
+                    style="@style/glass_3common_land"
+                    android:layout_column="4"
+                    android:src="@mipmap/ic13" />
+            </TableRow>
+
+            <TableRow android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/t10"
+                    style="@style/glass_3common_land"
+                    android:layout_column="0"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:text="@string/t10" />
+
+                <TextView
+                    android:id="@+id/t11"
+                    style="@style/glass_3common_land"
+                    android:layout_column="1"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:text="@string/t11" />
+
+                <TextView
+                    android:id="@+id/t12"
+                    style="@style/glass_3common_land"
+                    android:layout_column="2"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:text="@string/t12" />
+
+                <TextView
+                    android:id="@+id/t13"
+                    style="@style/glass_3common_land"
+                    android:layout_column="4"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:text="@string/t13" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/t101"
+                    style="@style/glass_3common_land"
+                    android:layout_column="0"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:text="@string/t101" />
+
+                <TextView
+                    android:id="@+id/t111"
+                    style="@style/glass_3common_land"
+                    android:layout_column="1"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:text="@string/t111" />
+
+                <TextView
+                    android:id="@+id/t121"
+                    style="@style/glass_3common_land"
+                    android:layout_column="2"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:text="@string/t121" />
+
+                <TextView
+                    android:id="@+id/t131"
+                    style="@style/glass_3common_land"
+                    android:layout_column="4"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:text="@string/t131" />
+
+            </TableRow>
+
+            <TableRow android:layout_marginTop="50dp">
+
+                <ImageView
+                    android:id="@+id/i20"
+                    style="@style/glass_3common_land"
+                    android:layout_column="0"
+                    android:src="@mipmap/ic20" />
+
+                <ImageView
+                    android:id="@+id/i21"
+                    style="@style/glass_3common_land"
+                    android:layout_column="1"
+                    android:src="@mipmap/ic21" />
+
+                <ImageView
+                    android:id="@+id/i22"
+                    style="@style/glass_3common_land"
+                    android:layout_column="2"
+                    android:src="@mipmap/ic22" />
+
+                <ImageView
+                    android:id="@+id/i23"
+                    style="@style/glass_3common_land"
+                    android:layout_column="4"
+                    android:src="@mipmap/ic23" />
+            </TableRow>
+
+            <TableRow android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/t20"
+                    style="@style/glass_3common_land"
+                    android:layout_column="0"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:text="@string/t20" />
+
+                <TextView
+                    android:id="@+id/t21"
+                    style="@style/glass_3common_land"
+                    android:layout_column="1"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:text="@string/t21" />
+
+                <TextView
+                    android:id="@+id/t22"
+                    style="@style/glass_3common_land"
+                    android:layout_column="2"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:text="@string/t22" />
+
+                <TextView
+                    android:id="@+id/t23"
+                    style="@style/glass_3common_land"
+                    android:layout_column="4"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:text="@string/t23" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/t201"
+                    style="@style/glass_3common_land"
+                    android:layout_column="0"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:text="@string/t201" />
+
+                <TextView
+                    android:id="@+id/t211"
+                    style="@style/glass_3common_land"
+                    android:layout_column="1"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:text="@string/t211" />
+
+                <TextView
+                    android:id="@+id/t221"
+                    style="@style/glass_3common_land"
+                    android:layout_column="2"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:text="@string/t221" />
+
+                <TextView
+                    android:id="@+id/t231"
+                    style="@style/glass_3common_land"
+                    android:layout_column="4"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:text="@string/t231" />
+
+            </TableRow>
+
+        </TableLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
