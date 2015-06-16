@@ -1,6 +1,7 @@
 package com.dekton.dektonapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -8,13 +9,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-public class ViewPagerAdapter extends PagerAdapter {
+public class ViewPagerAdapter extends PagerAdapter implements Animation.AnimationListener {
 
     //Declare variables
     Context context;
@@ -50,6 +52,7 @@ public class ViewPagerAdapter extends PagerAdapter {
         //Declare variables
         ImageView iconimage, whitebox, bgimage;
         TextView titletext, title_2text, descriptiontext;
+        final ViewPager viewPager;
         Animation translate, slide;
         inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View itemView = inflater.inflate(R.layout.slidescreen_item, container, false);
@@ -87,10 +90,8 @@ public class ViewPagerAdapter extends PagerAdapter {
         translate.setRepeatMode(Animation.REVERSE);
         translate.setInterpolator(new LinearInterpolator());
         bgimage.setAnimation(translate);
-        slide = new TranslateAnimation(TranslateAnimation.ABSOLUTE, 150f , TranslateAnimation.ABSOLUTE, 0f,
-                TranslateAnimation.ABSOLUTE,0f,TranslateAnimation.ABSOLUTE,0f);
-        slide.setDuration(3000);
-        slide.setInterpolator(new LinearInterpolator());
+        slide = AnimationUtils.loadAnimation(this.context, R.anim.whiteboxanim);
+        slide.setAnimationListener(this);
         whitebox.startAnimation(slide);
         iconimage.startAnimation(slide);
         titletext.startAnimation(slide);
@@ -101,11 +102,26 @@ public class ViewPagerAdapter extends PagerAdapter {
         return itemView;
     }
 
+
     @Override
     public void destroyItem(ViewGroup container, int position, Object object) {
         //Remove slidescreen_item.xml from viewpager
         ((ViewPager) container).removeView((RelativeLayout) object);
     }
 
+    @Override
+    public void onAnimationStart(Animation animation) {
+
+    }
+
+    @Override
+    public void onAnimationEnd(Animation animation) {
+
+    }
+
+    @Override
+    public void onAnimationRepeat(Animation animation) {
+
+    }
 }
 
